@@ -105,7 +105,7 @@ class Question(models.Model):
     # Has a One-To-Many (or Many-To-Many if you want to reuse questions) relationship with course
     course = models.ManyToManyField(Course)
     # Foreign key to lesson
-    lesson = models.ForeignKey(Lesson, trhough='Course', on_delete=models.CASCADE)
+    lesson = models.ForeignKey(Lesson, on_delete=models.CASCADE)
     # question text
     question_text = models.CharField(max_length=200)
     # question grade/mark
